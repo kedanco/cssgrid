@@ -57,3 +57,40 @@
 - -1 may only extend till end of explicit grid, other values in implicit grid may still exist outside your (-1) position
 - some -1 values may not work properly if we did not define actual rows
 - column and row 1 / -1 take sup entire grid, and shfits all other grid items to implicit rows and columns
+
+## Lesson 11: Spanning and Placing Cardio
+- Keeping code examples is a good way of recapping, maybe I should do this for every note file that I write.
+- .item20{ grid-row: 4 / span 3; } didn't notice that I could provide a span as a start/end value, makes it so much more flexible that I don't need to specify a fixed value :)
+- grid-template-columns: repeat(5,1fr 2fr); And of course, thank God for repeat values :)
+
+## Lesson 12: auto-fit and auto-fill
+- when there's items to fill up a grid, auto-fit and auto-fill kinda do the same thing
+- when there's not enough items, auto-fill extends the grid (as if there's extra tracks) and auto-fit ends the grid at the last item.
+- using auto-fill and placing the last track to the end simulates a responsive navbar behavior. auto-fit feels like a 'fixed' positioning instead.
+
+## Lesson 13: Using minmax() for Responsive Grids
+- Sometimes text get too big for their track sizes.
+- Having minmax(150px,1fr) as the value for track size makes the track size flexible.
+- auto-fill minmax will see the tracks resize for a lil-bit everytime the grid size changes
+- auto-fit minmax displays truly responsive behavior -  with the tracks spreading out over the full-width.
+- 'auto' for a specific track size may make it full-width when other tracks are not, no more consistency
+- fit-content limits a track size.
+
+## Lesson 14: Grid Template Areas
+- name your areas by using grid-template-areas: "sidebar-1 content sidebar-2" "sidebar-1 content sidebar-2";
+- assign the tracks to these areas using
+grid-area: footer;
+- Line names are given automatically from the area names
+- chaining a whole block of area names is possible grid-template-areas:
+        "A A A A B C D E"
+        "A A A A B C D E"
+        "A A A A B C D E"
+        "A A A A B C D E"
+- grid-column: A-start / E will then make the track full-width
+- grid-area: A will make the element span across the whole A block.
+
+## Lesson 15: Naming lines in CSS Grid
+- naming of lines is done using [name-here] syntax
+- naming should be in-between track values to denote start and end line names like [content-start] 500px [content-end] 1fr [site-right]
+- name multiple line names by spaced values inside an [] sign, [sidebar-start site-left] 1fr
+
