@@ -38,7 +38,7 @@
 - not all the space is used because CSS Grid will slice the grid following the px sizings
 - fr allows for flexible values, and making full use of the full grid
 - fr can be used as a fraction compared to other tracks (1fr 3fr 1fr 1fr)
-- auto will asjust to make size of content, whole column/row will follow
+- auto will adjust to make size of content, whole column/row will follow
 
 ## Lesson 8: CSS Grid repeat function
 - repeat functon(num of times, value to repeat)
@@ -94,3 +94,37 @@ grid-area: footer;
 - naming should be in-between track values to denote start and end line names like [content-start] 500px [content-end] 1fr [site-right]
 - name multiple line names by spaced values inside an [] sign, [sidebar-start site-left] 1fr
 
+## Lesson 16: grid auto-flow dense Block Fitting
+- dense makes the grid place the tracks with specific requirements first, followed by the rest of the blocks w/ normal arrangement. May not work out perfectly.
+- Works like a Masonry effect 
+
+## Lesson 17: CSS Grid Alignment + Centering
+- Convenient to use Grid to align items
+- justify for horizontal, align for vertical
+- justify-items: start, end, center, stretch
+- place-items: center center but some browsers may need auto-prefixer to change to manual justify and align
+- justify-content has a number of options, including space-between, space-around that makes it convenient to spread out items on a page
+
+## Lesson 18: Re-ordering Grid items
+- order property needs to be on all if you want proper ordering
+- first item at 0
+- not good for accessibility and screen readers
+- difficult to select
+
+## Lesson 19: Nesting Grid with Album Layout
+- grid-template-columns: repeat(auto-fit, minmax(400px,1fr)) kinda the standard sizing for a responsive grid layout
+- grid-gap to separate albums and gtc to tell grid how to separate image and album details
+- Good to have properly nested html structure (divs) before adding grid CSS
+
+## Lesson 20: CSS Grid Image Gallery
+- holyfuck you can just rgba in hex background: #ffc60032;
+- if your overlay has the same grid values as your div like `grid-column: 1 / -1;` and `grid-row: 1 / -1;` then overlay will appear and cover the div with `object-fit: cover;`
+- transform:translateY to shift overlays outside and back in when hovered
+- sometimes need to take note of track overflow, img sizes (resize grid and make img 100% instead of targeting img)
+- display: grid; justify-items: center; align-items: center; holygrail for centering anything
+
+## Lesson 21: Flexbox vs CSS Grid
+- Grid can do anything flexbox can do
+- Flexbox can be transitioned (animated) unlike grid
+- More consistency, less bugs across browser
+- 
