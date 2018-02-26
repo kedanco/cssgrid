@@ -125,6 +125,24 @@ grid-area: footer;
 
 ## Lesson 21: Flexbox vs CSS Grid
 - Grid can do anything flexbox can do
+- Grid has more consistency, less bugs across browser
 - Flexbox can be transitioned (animated) unlike grid
-- More consistency, less bugs across browser
+- Awkward stack sizes look nicer on Flexbox, some not possible with Grid
+- Flexbox doesn't have gap, so margins are used and may not be that effective.
+
+## Lesson 22: Recreating Codepen
+- Start by disecting the page into grid tracks
+- within each track, it may be another grid as well, containing different grid elements
+- with adequate padding and display:block, the elements should have no problem looking good
+- 
+
+## Lesson 23: Bootstrappy Grid with CSS Variables
+- Able to use variables (--span, --col) for grid css and inline styling
+- Can declare var first `--span: 1;` or just go ahead and call `var(--span, 12)` where 12 is default value is span's missing a value
+
+## Lesson 24: Responsive Website
+- Able to use Aria-expanded to toggle menu show or hide
+- Learned new CSS operator ~ (tilda) that means the adjacent/next element (div ~ ul)
+- combining media queries with grid template areas makes it super convenient to reallocate positions
+- using var for direction of linear gradient
 - 
