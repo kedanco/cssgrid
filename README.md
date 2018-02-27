@@ -134,7 +134,6 @@ grid-area: footer;
 - Start by disecting the page into grid tracks
 - within each track, it may be another grid as well, containing different grid elements
 - with adequate padding and display:block, the elements should have no problem looking good
-- 
 
 ## Lesson 23: Bootstrappy Grid with CSS Variables
 - Able to use variables (--span, --col) for grid css and inline styling
@@ -145,4 +144,8 @@ grid-area: footer;
 - Learned new CSS operator ~ (tilda) that means the adjacent/next element (div ~ ul)
 - combining media queries with grid template areas makes it super convenient to reallocate positions
 - using var for direction of linear gradient
-- 
+
+## Lesson 25: Full Bleed Blog
+- Using `grid-column: 1 / span 1;` and `grid-column: span 1 / -1` to align tips to the left and right of posts
+- `grid-column: 2 / -2;` sets the blog in the center and gives you 2 gutters
+- `text-decoration: underline wavy var(--yellow);` for links look fresh!
